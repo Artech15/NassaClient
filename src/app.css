@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Assistant;
+    src: url('../src//fonts//Assistant-Regular.ttf') format('trueType');
+}
+
+@font-face {
+    font-family: AssistantBold;
+    src: url('../src//fonts//Assistant-Bold.ttf') format('trueType');
+}
+
+
+@font-face {
+    font-family: Almoni;
+    /*Can be any text*/
+    src: local("Almoni"),
+        url("./assets//fonts//AlmoniLight.ttf") format("truetype");
+}
+
+body {
+    font-family: Assistant;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+}

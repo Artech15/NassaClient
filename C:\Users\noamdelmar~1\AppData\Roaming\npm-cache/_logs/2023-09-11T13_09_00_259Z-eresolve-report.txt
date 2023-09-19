@@ -1,0 +1,287 @@
+'Log files:
+/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient/C:\Users\noamdelmar~1\AppData\Roaming\npm-cache/_logs/2023-09-11T13_09_00_259Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: mycrossword@1.2.4
+Found: react@18.2.0
+node_modules/react
+  react@"^18.2.0" from the root project
+  peer react@">=16.8.0" from @emotion/react@11.11.1
+  node_modules/@emotion/react
+    peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.11.0
+    node_modules/@emotion/styled
+      @emotion/styled@"^11.11.0" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+    peerOptional @emotion/react@"^11.5.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+    peerOptional @emotion/react@"^11.4.1" from @mui/styled-engine@5.13.2
+    node_modules/@mui/styled-engine
+      @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+    peerOptional @emotion/react@"^11.5.0" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+  peer react@">=16.8.0" from @emotion/styled@11.11.0
+  node_modules/@emotion/styled
+    @emotion/styled@"^11.11.0" from the root project
+    peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+    peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+    node_modules/@mui/styled-engine
+      @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+    peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+  peer react@">=16.8.0" from @emotion/use-insertion-effect-with-fallbacks@1.0.1
+  node_modules/@emotion/use-insertion-effect-with-fallbacks
+    @emotion/use-insertion-effect-with-fallbacks@"^1.0.1" from @emotion/react@11.11.1
+    node_modules/@emotion/react
+      peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.11.0
+      node_modules/@emotion/styled
+        @emotion/styled@"^11.11.0" from the root project
+        peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+        peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+        node_modules/@mui/styled-engine
+          @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+          node_modules/@mui/system
+            @mui/system@"^5.14.5" from @mui/material@5.14.5
+            node_modules/@mui/material
+              @mui/material@"^5.14.5" from the root project
+        peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/react@"^11.5.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/react@"^11.4.1" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/react@"^11.5.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+    @emotion/use-insertion-effect-with-fallbacks@"^1.0.1" from @emotion/styled@11.11.0
+    node_modules/@emotion/styled
+      @emotion/styled@"^11.11.0" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@5.13.2
+      node_modules/@mui/styled-engine
+        @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+        node_modules/@mui/system
+          @mui/system@"^5.14.5" from @mui/material@5.14.5
+          node_modules/@mui/material
+            @mui/material@"^5.14.5" from the root project
+      peerOptional @emotion/styled@"^11.3.0" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+  peer react@"^18.2.0" from @jaredreisinger/react-crossword@5.2.0
+  node_modules/@jaredreisinger/react-crossword
+    @jaredreisinger/react-crossword@"^5.2.0" from the root project
+  peer react@">= 16.8.0" from styled-components@5.3.11
+  node_modules/@jaredreisinger/react-crossword/node_modules/styled-components
+    styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+    node_modules/@jaredreisinger/react-crossword
+      @jaredreisinger/react-crossword@"^5.2.0" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/base@5.0.0-beta.11
+  node_modules/@mui/base
+    @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/material@5.14.5
+  node_modules/@mui/material
+    @mui/material@"^5.14.5" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/private-theming@5.14.5
+  node_modules/@mui/private-theming
+    @mui/private-theming@"^5.14.5" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/styled-engine@5.13.2
+  node_modules/@mui/styled-engine
+    @mui/styled-engine@"^5.13.2" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/system@5.14.5
+  node_modules/@mui/system
+    @mui/system@"^5.14.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+  peer react@"^17.0.0 || ^18.0.0" from @mui/utils@5.14.5
+  node_modules/@mui/utils
+    @mui/utils@"^5.14.5" from @mui/base@5.0.0-beta.11
+    node_modules/@mui/base
+      @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+    @mui/utils@"^5.14.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+    @mui/utils@"^5.14.5" from @mui/private-theming@5.14.5
+    node_modules/@mui/private-theming
+      @mui/private-theming@"^5.14.5" from @mui/system@5.14.5
+      node_modules/@mui/system
+        @mui/system@"^5.14.5" from @mui/material@5.14.5
+        node_modules/@mui/material
+          @mui/material@"^5.14.5" from the root project
+    @mui/utils@"^5.14.5" from @mui/system@5.14.5
+    node_modules/@mui/system
+      @mui/system@"^5.14.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+  peerOptional react@"^16.9.0 || ^17.0.0 || ^18" from @reduxjs/toolkit@1.9.5
+  node_modules/@reduxjs/toolkit
+    @reduxjs/toolkit@"^1.6.2" from mycrossword@1.2.4
+    node_modules/mycrossword
+      mycrossword@"^1.2.4" from the root project
+  peer react@"^18.0.0" from @testing-library/react@13.4.0
+  node_modules/@testing-library/react
+    @testing-library/react@"^13.4.0" from the root project
+  peer react@">=17.0.2" from react-crossword-v2@4.3.9
+  node_modules/react-crossword-v2
+    react-crossword-v2@"^4.3.9" from the root project
+  peer react@"^18.2.0" from react-dom@18.2.0
+  node_modules/react-dom
+    react-dom@"^18.2.0" from the root project
+    peer react-dom@"^18.2.0" from @jaredreisinger/react-crossword@5.2.0
+    node_modules/@jaredreisinger/react-crossword
+      @jaredreisinger/react-crossword@"^5.2.0" from the root project
+    peer react-dom@">= 16.8.0" from styled-components@5.3.11
+    node_modules/@jaredreisinger/react-crossword/node_modules/styled-components
+      styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+      node_modules/@jaredreisinger/react-crossword
+        @jaredreisinger/react-crossword@"^5.2.0" from the root project
+    peer react-dom@"^17.0.0 || ^18.0.0" from @mui/base@5.0.0-beta.11
+    node_modules/@mui/base
+      @mui/base@"5.0.0-beta.11" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+    peer react-dom@"^17.0.0 || ^18.0.0" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+    peer react-dom@"^18.0.0" from @testing-library/react@13.4.0
+    node_modules/@testing-library/react
+      @testing-library/react@"^13.4.0" from the root project
+    peer react-dom@">=17.0.2" from react-crossword-v2@4.3.9
+    node_modules/react-crossword-v2
+      react-crossword-v2@"^4.3.9" from the root project
+    peer react-dom@">=16.8" from react-router-dom@6.15.0
+    node_modules/react-router-dom
+      react-router-dom@"^6.15.0" from the root project
+    peer react-dom@">=16.6.0" from react-transition-group@4.4.5
+    node_modules/react-transition-group
+      react-transition-group@"^4.4.5" from @mui/material@5.14.5
+      node_modules/@mui/material
+        @mui/material@"^5.14.5" from the root project
+    peer react-dom@">= 16.8.0" from styled-components@6.0.7
+    node_modules/styled-components
+      styled-components@"^6.0.7" from the root project
+      peer styled-components@">= 2" from babel-plugin-styled-components@2.1.4
+      node_modules/babel-plugin-styled-components
+        babel-plugin-styled-components@">= 1.12.0" from styled-components@5.3.11
+        node_modules/@jaredreisinger/react-crossword/node_modules/styled-components
+          styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+          node_modules/@jaredreisinger/react-crossword
+            @jaredreisinger/react-crossword@"^5.2.0" from the root project
+        peerOptional babel-plugin-styled-components@">= 2" from styled-components@6.0.7
+      styled-components@">=5.3.3" from react-crossword-v2@4.3.9
+      node_modules/react-crossword-v2
+        react-crossword-v2@"^4.3.9" from the root project
+  peer react@"^16.8.3 || ^17 || ^18" from react-redux@7.2.9
+  node_modules/react-redux
+    peerOptional react-redux@"^7.2.1 || ^8.0.2" from @reduxjs/toolkit@1.9.5
+    node_modules/@reduxjs/toolkit
+      @reduxjs/toolkit@"^1.6.2" from mycrossword@1.2.4
+      node_modules/mycrossword
+        mycrossword@"^1.2.4" from the root project
+    react-redux@"^7.2.6" from mycrossword@1.2.4
+    node_modules/mycrossword
+      mycrossword@"^1.2.4" from the root project
+  peer react@">=16.8" from react-router@6.15.0
+  node_modules/react-router
+    react-router@"6.15.0" from react-router-dom@6.15.0
+    node_modules/react-router-dom
+      react-router-dom@"^6.15.0" from the root project
+  peer react@">=16.8" from react-router-dom@6.15.0
+  node_modules/react-router-dom
+    react-router-dom@"^6.15.0" from the root project
+  peer react@">= 16" from react-scripts@5.0.1
+  node_modules/react-scripts
+    react-scripts@"5.0.1" from the root project
+  peer react@">=16.6.0" from react-transition-group@4.4.5
+  node_modules/react-transition-group
+    react-transition-group@"^4.4.5" from @mui/material@5.14.5
+    node_modules/@mui/material
+      @mui/material@"^5.14.5" from the root project
+  peer react@">= 16.8.0" from styled-components@6.0.7
+  node_modules/styled-components
+    styled-components@"^6.0.7" from the root project
+    peer styled-components@">= 2" from babel-plugin-styled-components@2.1.4
+    node_modules/babel-plugin-styled-components
+      babel-plugin-styled-components@">= 1.12.0" from styled-components@5.3.11
+      node_modules/@jaredreisinger/react-crossword/node_modules/styled-components
+        styled-components@"^5.3.6" from @jaredreisinger/react-crossword@5.2.0
+        node_modules/@jaredreisinger/react-crossword
+          @jaredreisinger/react-crossword@"^5.2.0" from the root project
+      peerOptional babel-plugin-styled-components@">= 2" from styled-components@6.0.7
+    styled-components@">=5.3.3" from react-crossword-v2@4.3.9
+    node_modules/react-crossword-v2
+      react-crossword-v2@"^4.3.9" from the root project
+
+Could not resolve dependency:
+peer react@"^17.0.2" from mycrossword@1.2.4
+node_modules/mycrossword
+  mycrossword@"^1.2.4" from the root project
+
+Conflicting peer dependency: react@17.0.2
+node_modules/react
+  peer react@"^17.0.2" from mycrossword@1.2.4
+  node_modules/mycrossword
+    mycrossword@"^1.2.4" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

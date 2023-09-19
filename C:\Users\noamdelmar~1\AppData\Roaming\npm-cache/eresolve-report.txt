@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2023-08-30T08:55:14.898Z
+
+While resolving: my-app@0.1.0
+Found: react@18.2.0
+node_modules/react
+  react@"^18.2.0" from the root project
+
+Could not resolve dependency:
+peer react@"^17.0.2" from mycrossword@1.2.4
+node_modules/mycrossword
+  mycrossword@"^1.2.4" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "react",
+    "version": "18.2.0",
+    "whileInstalling": {
+      "name": "my-app",
+      "version": "0.1.0",
+      "path": "/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient"
+    },
+    "location": "node_modules/react",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "react",
+        "spec": "^18.2.0",
+        "from": {
+          "location": "/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "prod",
+    "name": "react",
+    "spec": "^18.2.0",
+    "from": {
+      "location": "/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "react",
+    "spec": "^17.0.2",
+    "error": "INVALID",
+    "from": {
+      "name": "mycrossword",
+      "version": "1.2.4",
+      "whileInstalling": {
+        "name": "my-app",
+        "version": "0.1.0",
+        "path": "/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient"
+      },
+      "location": "node_modules/mycrossword",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "mycrossword",
+          "spec": "^1.2.4",
+          "from": {
+            "location": "/Users/noamdelmar/Desktop/Noam/Simba/Nassa/NassaClient"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}
