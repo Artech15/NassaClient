@@ -26,7 +26,10 @@ function Login() {
       const { token } = res.data.token;
       const user = res.data.user;
 
-      setUser(user._id)
+      const resUser = await httpCommon.get(`/user/${user.userId}`);
+
+      setUser(resUser.data)
+      localStorage.setItem('user', JSON.stringify(resUser.data));
 
       // Save the token in a cookie
       Cookies.set('userToken', token, { expires: 1 }); // Expires in 1 day

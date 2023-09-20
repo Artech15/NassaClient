@@ -54,11 +54,11 @@ export default function Temp() {
 
     return(
         <> 
-             {/* <Group /> */}
-            {/* <Table data={tableData} /> 
+            <Group />
+            <Table data={tableData} /> 
             <FreeText data={freeTextData} setData={setFreeTextData} /> 
             <CheckBox data={checkBox} setData={setCheckBox} />
-            <LinearScale data={scaleData} setData={setScaleData}/> */}
+            <LinearScale data={scaleData} setData={setScaleData}/>
         </>
     )
 }

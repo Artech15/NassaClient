@@ -76,3 +76,12 @@ export const MyCoursesTitle = styled.h2(() => ({
     fontFamily: 'AssistantBold',
     fontSize: '1.2rem'
 }));
+
+export const GroupsContainer = styled.div(() => ({
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(25rem, 18%))',
+    gap: '20px',
+    direction :'rtl',
+    justifyContent: 'center',
+    WebkitBoxPack :'center'
+}));
