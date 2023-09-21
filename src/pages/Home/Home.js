@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Container, StyledTop, FlexContainer, Title, Text, StyledInput, StyledBottom, CourseContainer,MyCoursesTitle, GroupsContainer } from './styles';
 import httpCommon from '../../services/http-common';
 import CourseItem from '../../components/CourseItem/CourseItem';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+
 export default function Home() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [groups, setGroups] = useState([])
@@ -27,7 +30,7 @@ export default function Home() {
     // Use Promise.all to wait for all promises to resolve
     Promise.all(promiseGroups)
       .then(dataArray => {
-        setGroups([dataArray[0]]);
+        setGroups(dataArray);
       })
       .catch(error => {
         console.error('Error fetching groups:', error);
@@ -40,7 +43,20 @@ export default function Home() {
                 <FlexContainer>
                     <Title>NASSA</Title>
                     <Text>מערכת לניהול קורסים ותיקי חניכים</Text>
-                    <StyledInput />
+                    {/* <StyledInput></StyledInput> */}
+                     <StyledInput
+                        placeholder="Search..."
+                        // variant="outlined"/
+                        fullWidth
+                        onChange={console.log('dfsc')}
+                        InputProps={{
+                          endAdornment: (
+                        <IconButton edge="end" aria-label="search" onClick={console.log('dfsc')}>
+                              <SearchIcon />
+                            </IconButton>
+                          ),
+                        }}
+                     />
                 </FlexContainer>
             </StyledTop>
             <StyledBottom>

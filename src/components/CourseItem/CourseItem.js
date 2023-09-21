@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Container, CourseName, IconContainer } from './styles';
+import { Container, CourseName, IconContainer, FlexContainer } from './styles';
 import httpCommon from '../../services/http-common';
 import CircleIcon from '@mui/icons-material/Circle';
 
 export default function CourseItem({group}) {
     const [parentIds, setParentIds] = useState([]);
-    const [activeCourse, setActiveCourse] = useState(group.active)
+    const [activeCourse, setActiveCourse] = useState(group.active);
+    const [joinable, setJouoinable] = useState(group.joinable);
 
     const getParentGroups = async (parentId) => {
-        try {
+        try { 
             const res = await httpCommon.get(`/group/${parentId}`);
             console.log(res.data)
             
@@ -29,11 +30,19 @@ export default function CourseItem({group}) {
 
     return(
         <Container>
+            <FlexContainer>
+                <IconContainer green={activeCourse}>
+                    <CircleIcon style={{ fontSize: '1.1rem', marginLeft: '.5rem'}} />
+                    <p> { activeCourse ? 'קורס פעיל' : 'לא פעיל'} </p>
+                </IconContainer>
+                {joinable ?
+                 <IconContainer green={joinable}>
+                    <CircleIcon style={{ fontSize: '1.1rem', marginLeft: '.5rem'}} />
+                    <p>הרשמה פתוחה</p>
+                </IconContainer> 
+                : null }
+            </FlexContainer>
             <CourseName>
-            <IconContainer>
-                <CircleIcon style={{color: activeCourse ? '#72bf6b' : 'rgb(215,215,215)', fontSize: '1.3rem', marginLeft: '.5rem'}} />
-                <p>קורס פעיל</p>
-            </IconContainer>
                 קורס  {group.displayName} |
                 <span> קורס יסוד </span>
             </CourseName>

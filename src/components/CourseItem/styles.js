@@ -1,29 +1,35 @@
 import styled from 'styled-components';
+import CircleIcon from '@mui/icons-material/Circle';
 
 export const Container = styled.div(() => ({
     // width: '25rem',
-    height: '8rem',
+    height: '10rem',
     border: '1px solid rgb(215,215,215)',
     borderRadius: '.5rem',
-    padding: '1rem'
+    padding: '0 1rem'
 }));
 
 export const CourseName = styled.h1(() => ({
     fontSize: '1.5rem',
     color: 'rgb(117,117,117)',
     fontFamily: 'AssistantBold',
-
+    marginTop: '.2rem',
     'span': {
         fontFamily: 'Assistant',
         fontSize: '1.3rem'
     }
 }));
 
-export const IconContainer = styled.div(() => ({
+export const IconContainer = styled.div((props) => ({
     display: 'flex',
-    width: '30%',
-    color: '#72bf6b',
-    fontSize: '1rem',
+    width: 'auto',
+    color: props.green ? '#72bf6b' : 'rgb(215,215,215)',
+    fontSize: '.9rem',
     fontFamily: 'Assistant',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginLeft: '1.2rem'
+}));
+
+export const FlexContainer = styled.div(() => ({
+    display: 'flex'
 }));
