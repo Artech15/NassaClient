@@ -25,7 +25,8 @@ export const FlexContainer = styled.div(() => ({
     textAlign: 'end',
     right: '0',
     position: 'absolute',
-    marginRight: '5%'
+    marginRight: '5%',
+    marginTop: '3rem'
 }));
 
 export const Title = styled.h1(() => ({
@@ -46,9 +47,10 @@ export const StyledInput = styled(TextField)`
   margin-bottom: 1rem;
   font-size: 1rem;
   direction: rtl;
-  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
     background-color: rgb(191,191,191);
     color: white;
+    border-radius: .6rem;
   }
 `;
 
@@ -74,13 +76,14 @@ export const MyCoursesTitle = styled.h2(() => ({
     paddingRight: '2.6rem',
     paddingTop: '1rem',
     fontFamily: 'AssistantBold',
-    fontSize: '1.2rem'
+    fontSize: '1.2rem',
+    marginBottom: '2rem'
 }));
 
 export const GroupsContainer = styled.div(() => ({
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(25rem, 18%))',
-    gap: '20px',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(23rem, 18%))',
+    gap: '50px',
     direction :'rtl',
     justifyContent: 'center',
     WebkitBoxPack :'center'

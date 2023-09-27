@@ -45,14 +45,14 @@ export default function Home() {
                     <Text>מערכת לניהול קורסים ותיקי חניכים</Text>
                     {/* <StyledInput></StyledInput> */}
                      <StyledInput
-                        placeholder="Search..."
+                        placeholder="חיפוש אנשים וקורסים באמ״ן"
                         // variant="outlined"/
-                        fullWidth
-                        onChange={console.log('dfsc')}
+                        // fullWidth
+                        onChange={() => console.log('dfsc')}
                         InputProps={{
-                          endAdornment: (
-                        <IconButton edge="end" aria-label="search" onClick={console.log('dfsc')}>
-                              <SearchIcon />
+                          startAdornment: (
+                        <IconButton edge="start" aria-label="search" style={{color:'rgb(218,218,218)', transform: 'scaleX(-1)'}}>
+                              <SearchIcon style={{fontSize: '2rem'}} />
                             </IconButton>
                           ),
                         }}

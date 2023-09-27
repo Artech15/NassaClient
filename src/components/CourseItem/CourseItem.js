@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Container, CourseName, IconContainer, FlexContainer } from './styles';
+import { Container, CourseName, IconContainer, FlexContainer, ParentName } from './styles';
 import httpCommon from '../../services/http-common';
 import CircleIcon from '@mui/icons-material/Circle';
 
 export default function CourseItem({group}) {
     const [parentIds, setParentIds] = useState([]);
     const [activeCourse, setActiveCourse] = useState(group.active);
-    const [joinable, setJouoinable] = useState(group.joinable);
+    const [joinable, setJoinable] = useState(group.joinable);
 
     const getParentGroups = async (parentId) => {
         try { 
-            const res = await httpCommon.get(`/group/${parentId}`);
-            console.log(res.data)
-            
+            const res = await httpCommon.get(`/group/${parentId}`);            
         } catch (error) {
             console.error('Group get error:', error);
         }
@@ -46,6 +44,9 @@ export default function CourseItem({group}) {
                 קורס  {group.displayName} |
                 <span> קורס יסוד </span>
             </CourseName>
+            <FlexContainer>
+                <ParentName styles={{fontSize: '1rem'}}>{parentIds[0]?.displayName} | </ParentName>
+            </FlexContainer>
         </Container>
     )
 }
