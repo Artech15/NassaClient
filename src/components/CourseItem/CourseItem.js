@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Container, CourseName, IconContainer, FlexContainer, ParentName } from './styles';
 import httpCommon from '../../services/http-common';
 import CircleIcon from '@mui/icons-material/Circle';
+import { useNavigate } from 'react-router-dom';
 
 export default function CourseItem({group}) {
     const [parentIds, setParentIds] = useState([]);
-    const [activeCourse, setActiveCourse] = useState(group.active);
-    const [joinable, setJoinable] = useState(group.joinable);
+    const activeCourse = group.active;
+    const joinable = group.joinable;
+    const navigate = useNavigate();
 
     const getParentGroups = async (parentId) => {
         try { 
@@ -27,7 +29,7 @@ export default function CourseItem({group}) {
     },[])
 
     return(
-        <Container>
+        <Container onClick={() => {localStorage.setItem('group', JSON.stringify(group)); navigate('/group')}}>
             <FlexContainer>
                 <IconContainer green={activeCourse}>
                     <CircleIcon style={{ fontSize: '1.1rem', marginLeft: '.5rem'}} />

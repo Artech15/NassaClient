@@ -3,7 +3,7 @@ import Table from '../../components/Templates/Table/Table';
 import FreeText from '../../components/Templates/FreeText/FreeText';
 import CheckBox from '../../components/Templates/CheckBox/CheckBox';
 import LinearScale from '../../components/Templates/linearScale/LinearScale';
-import Group from '../Group/Group';
+import Group from '../CreateGrouptemp/Group';
 
 export default function Temp() {
     const [freeTextData, setFreeTextData] = useState({

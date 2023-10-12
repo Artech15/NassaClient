@@ -5,8 +5,9 @@ const MainContext = React.createContext();
 
 const ContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [group, setGroup] = useState(null);
 
-    const value = { user, setUser };
+    const value = { user, setUser, group, setGroup };
     return <MainContext.Provider value={value}>{children}</MainContext.Provider>
 }
 

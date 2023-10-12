@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import { Container, WhiteContainer, Title, SaveButton } from './styles'
 import { Input } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import {useMainContext} from '../../context/useContext';
+import { useMainContext } from '../../context/useContext';
 
 function Login() {
   const navigate = useNavigate();
