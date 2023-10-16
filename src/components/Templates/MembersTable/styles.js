@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { TableCell, TableRow } from '@mui/material';
+import { grey } from '@mui/material/colors';
 
 export const StyledCell = styled(TableCell)((props) => ({
     '&&': {
@@ -7,15 +8,15 @@ export const StyledCell = styled(TableCell)((props) => ({
       textAlign: 'center',
       fontFamily: props.type === 'name' ? 'AssistantBold' : undefined,
       fontWeight: props.type === 'row' ? '100' : undefined,
+      borderColor: 'transparent',
       ...props.styles
     }
 }));
 
-
 export const HeaderRow = styled(TableRow)(() => ({
     '&&': {
       color: '#6c6b6b',
-      backgroundColor: '#f6f6f6'
+      backgroundColor: '#f6f6f6',
     //   textAlign: 'center',
     }
 }));
@@ -28,4 +29,20 @@ export const MermbersToggle = styled.div((props) => ({
     backgroundColor: props.selected ? '#617dcc' : null,
     lineHeight: '2.2',
     cursor: 'pointer'
+}));
+
+export const ColumnsDiv = styled.button((props) => ({
+  '&&':{
+    borderStyle: 'solid',
+    borderRadius: '.6rem',
+    borderColor: grey[400],
+    lineHeight: '2.2',
+    width: '9rem',
+    borderWidth: '1px',
+    backgroundColor: props.clicked ? grey[300]: undefined
+  },
+  '&:hover': {
+    backgroundColor: grey[300],
+    cursor: 'pointer',
+  }
 }));

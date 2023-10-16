@@ -1,14 +1,21 @@
 import styled from 'styled-components';
+import { grey, white } from '@mui/material/colors';
 
 export const Container = styled.div(() => ({
-    // right: '0',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-end'
-    // width: '30rem',
-    // position: 'absolute'
+    position: 'absolute',
+    borderStyle: 'solid',
+    borderRadius: '.6rem',
+    borderColor: grey[400],
+    color:  grey[500],
+    fontSize: ".9rem",
+    backgroundColor: "white",
+    lineHeight: '2.2',
+    width: '12rem',
+    borderWidth: '1px',
+    width: '9rem'
 }));
-
 
 export const Title = styled.div(() => ({
     textAlign: 'right',
