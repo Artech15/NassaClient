@@ -17,7 +17,7 @@ export default function Home() {
                 return res.data
             }
             return null
-            
+
         } catch (error) {
             console.error('Group get error:', error);
         }
