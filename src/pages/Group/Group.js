@@ -19,8 +19,8 @@ import { grey } from "@mui/material/colors";
 export function Group() {
   const [page, setPage] = useState(1);
   const [group, setGroup] = useState(JSON.parse(localStorage.getItem("group")));
-  const [admin, setAdmin] = useState(false);
-  const [available, setAvailable] = useState(true);
+  const [admin, setAdmin] = useState(null);
+  const [available, setAvailable] = useState(null);
 
   const bigScreenText = available
     ? "אינך רשום לקורס, הרשם על מנת לראות את התכנים בעמוד"
@@ -28,10 +28,28 @@ export function Group() {
 
   useEffect(() => {
     const userId = JSON.parse(localStorage.getItem("user"))["_id"];
-    const pendingArr = group.pending;
 
-    const available = !pendingArr.includes(userId);
-    setAvailable(available);
+    //defining admin state
+    const adminsArr = JSON.parse(localStorage.getItem("group")).admin;
+    if(!adminsArr || !adminsArr.includes(userId)){
+          setAdmin(false);
+    }
+
+    //checking if user is already pending
+    const pendingArr = group.pending.map((obj) => {
+      if (obj["_id"]) {
+        return obj["_id"];
+      }
+      return obj;
+    });
+    const alreadyPending = pendingArr.includes(userId);
+
+    //checking if group is available for pending
+    const joinable = JSON.parse(localStorage.getItem("group")).joinable;
+
+    // setAvailable(joinable && !alreadyPending);
+    setAvailable(joinable && !alreadyPending);
+
   }, []);
 
   function formatDate(inputDate) {
@@ -49,23 +67,22 @@ export function Group() {
   }
 
   const CourseSignUpHandler = async () => {
+    //get user and group id
     const userId = JSON.parse(localStorage.getItem("user"))["_id"];
-    console.log("user id from local server -->> ", userId);
+    console.log("user id -> ", userId);
     const groupId = JSON.parse(localStorage.getItem("group"))["_id"];
+
     try {
+      //add user id to the group pending array
       const res = await httpCommon.patch(`/group/addPending/${groupId}`, {
         userId,
       });
+
       localStorage.setItem("group", JSON.stringify(res.data));
       setGroup(res.data);
-
-      // const { token } = response.data;
-      // Cookies.set('userToken', token, { expires: 1 }); // Expires in 1 day
-
       setAvailable(false);
     } catch (error) {
       console.error("Signup error:", error);
-      // Handle signup error, show an error message, etc.
     }
   };
 
