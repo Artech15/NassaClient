@@ -22,9 +22,7 @@ export function Group() {
   const [admin, setAdmin] = useState(null);
   const [available, setAvailable] = useState(null);
 
-  const bigScreenText = available
-    ? "אינך רשום לקורס, הרשם על מנת לראות את התכנים בעמוד"
-    : "הרשמתך למחזור ב נקלטה במערכת ונשלחה למפקדי הקורס";
+  const [bigScreenText, setBigScreenText] = useState(null);
 
   useEffect(() => {
     const userId = JSON.parse(localStorage.getItem("user"))["_id"];
@@ -47,9 +45,13 @@ export function Group() {
     //checking if group is available for pending
     const joinable = JSON.parse(localStorage.getItem("group")).joinable;
 
-    // setAvailable(joinable && !alreadyPending);
+    // setAvailable(true);
     setAvailable(joinable && !alreadyPending);
-
+    if(joinable){
+      setBigScreenText(alreadyPending ? "הרשמתך למחזור ב נקלטה במערכת ונשלחה למפקדי הקורס": "אינך רשום לקורס, הרשם על מנת לראות את התכנים בעמוד");
+    } else {
+      setBigScreenText('הקורס לא פתוח לרישום');
+    }
   }, []);
 
   function formatDate(inputDate) {
@@ -69,7 +71,6 @@ export function Group() {
   const CourseSignUpHandler = async () => {
     //get user and group id
     const userId = JSON.parse(localStorage.getItem("user"))["_id"];
-    console.log("user id -> ", userId);
     const groupId = JSON.parse(localStorage.getItem("group"))["_id"];
 
     try {
@@ -81,6 +82,7 @@ export function Group() {
       localStorage.setItem("group", JSON.stringify(res.data));
       setGroup(res.data);
       setAvailable(false);
+        setBigScreenText("הרשמתך למחזור ב נקלטה במערכת ונשלחה למפקדי הקורס");
     } catch (error) {
       console.error("Signup error:", error);
     }
