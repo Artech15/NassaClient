@@ -26,10 +26,30 @@ export default function Home() {
   const [filter, setFilter] = useState();
 
   const itemsToFilter = [
-    { name: "קורס יסוד", searchTag: "קורס יסוד" },
-    { name: "קורס מתקדם", searchTag: "קורס מתקדם" },
-    { name: "השתלמות מקצועית", searchTag: "השתלמות מקצועית" },
-    { name: "הכשרה פיקודית", searchTag: "הכשרה פיקודית" },
+    {
+      filterBy: "סוג הקורס",
+      lableInputId: "type-course",
+      id: "type-course-select",
+      options: ["קורס יסוד", "קורס מתקדם", "השתלמות מקצועית", "הכשרה פיקודית"]
+    },
+    {
+      filterBy: "התפקיד בקורס",
+      lableInputId: "role",
+      id: "role-select",
+      options: ["חניך", "מפקד", 'מק"ס']
+    },
+    {
+      filterBy: "פעילות",
+      lableInputId: "active",
+      id: "active-select",
+      options: ["פעיל", "לא פעיל"]
+    },
+    {
+      filterBy: "מצב הרשמה",
+      lableInputId: "joinable",
+      id: "joinable-select",
+      options: ["הרשמה פתוחה", "הרשמה סגורה"]
+    },
   ];
 
   const getUserCourse = async (groupId) => {
@@ -88,25 +108,27 @@ export default function Home() {
       <StyledBottom>
         <CourseContainer>
           <MyCoursesTitle>הקורסים שלי</MyCoursesTitle>
-          <FormControl sx={{ m: 4, minWidth: 90 }}>
-            <InputLabel id="demo-simple-select-label">סוג קורס</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={filter}
-              label="filter"
-              onChange={(e) => {
-                console.log(e.target);
-              }}
-            >
-              <MenuItem value="">
-                <em>הכל</em>
-              </MenuItem>
-              {itemsToFilter.map((item) => (
-                <MenuItem value={item.name}>{item.name}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+          {itemsToFilter.map((item) => 
+            <FormControl sx={{ m: 4, minWidth: 90 }}>
+              <InputLabel id={item.lableInputId}>{item.filterBy}</InputLabel>
+              <Select
+                labelId={item.lableInputId}
+                id={item.id}
+                value={filter}
+                label="filter"
+                onChange={(e) => {
+                  console.log(e.target);
+                }}
+              >
+                <MenuItem value="">
+                  <em>הכל</em>
+                </MenuItem>
+                {item.options.map((item) => (
+                  <MenuItem value={item}>{item}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          )}
           <GroupsContainer>
             {groups.map((group) => {
               return group !== null ? <CourseItem group={group} /> : null;

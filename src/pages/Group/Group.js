@@ -109,6 +109,7 @@ export function Group() {
 
       {!admin && (
         <Container>
+          {console.log(group)}
           <Header>
             <Logo>NASSA</Logo>
             <FlexContainer>
